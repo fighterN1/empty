@@ -11,7 +11,7 @@ after_script:
 before_install:
 
 - openssl aes-256-cbc -K $encrypted_7bac67cd0d57_key -iv $encrypted_7bac67cd0d57_iv
-  -in id_rsa.enc -out id_rsa -d
+  -in  .travis/id_rsa.enc -out id_rsa -d
 
 - mv id_rsa ~/.ssh -f
 
