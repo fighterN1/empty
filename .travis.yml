@@ -6,7 +6,7 @@ node_js:
 
 after_script:
 
-- scp -o StrictHostKeyChecking=no app.js root@192.168.40.155/home/www/root/
+- scp  app.js  StrictHostKeyChecking=no root@192.168.40.155:/home/www/root/
 
 before_install:
 
@@ -24,3 +24,4 @@ before_install:
 - ssh-add ~/.ssh/id_rsa
 
 - cp .travis/ssh_config ~/.ssh/config
+
