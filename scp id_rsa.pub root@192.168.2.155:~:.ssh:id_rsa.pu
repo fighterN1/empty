@@ -1,0 +1,23 @@
+scp id_rsa.pub root@192.168.2.155:~/.ssh/id_rsa.pub_temp
+
+
+scp  ~/.ssh/id_rsa.pub root@192.168.2.155:.ssh/id_rsa.pub 
+chmod 600 .ssh/authorized_keys
+
+
+User root
+Host node  //名字随便取
+HostName 192.168.2.155
+Port 22
+StrictHostKeyChecking no
+IdentityFile  ~/.ssh/id_rsa
+IdentitiesOnly yes
+Protocol 2
+Compression yes
+ServerAliveInterval 60
+ServerAliveCountMax 20
+LogLevel INFO
+
+
+//免密登陆
+ssh node
