@@ -6,7 +6,7 @@ node_js:
 
 after_script:
 
-- scp  app.js  StrictHostKeyChecking=no root@192.168.2.155:/home/www/root/
+- scp  -o  StrictHostKeyChecking=no app.js  root@192.168.2.155:/home/www/root/
 
 before_install:
 
